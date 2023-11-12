@@ -99,6 +99,7 @@ a {
 
 .main-nav-logo {
   color: var(--clr-iris);
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.17;
@@ -433,6 +434,7 @@ a {
 
 .footer-title {
   display: block;
+  font-family: "Raleway", sans-serif;
   color: var(--clr-iris);
   font-size: 18px;
   font-weight: 700;
@@ -450,11 +452,11 @@ a {
 /* Footer Text Style */
 
 .footer-text {
-  min-width: 288px;
+  max-width: 288px;
   color: var(--clr-cloud);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 72px;
+  margin: 0 auto 72px;
 }
 
 /* Footer Social Text Style */
@@ -994,6 +996,10 @@ a {
     display: none;
   }
 
+  .mobile-menu-container {
+    display: none;
+  }
+
   /* ============ Header Tablet Style ============ */
 
   .main-header {
@@ -1157,6 +1163,88 @@ a {
   }
 
   /* ============ Footer Tablet Style ============ */
+
+  .main-footer {
+    padding-left: 108px;
+  }
+
+  /* Footer Main Container Style */
+
+  .footer-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  /* Footer First Container Style */
+
+  .footer-first-container {
+    display: flex;
+    flex-direction: column;
+    gap: 17.5px;
+    align-items: center;
+  }
+
+  /* Footer Title Style */
+
+  .footer-title {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  /* Footer Text Style */
+
+  .footer-text {
+    max-width: 264px;
+    margin: 0;
+  }
+
+  /* Footer Text Socials List Style */
+
+  .footer-text-socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Footer Social Text Style */
+
+  .footer-social-text {
+    margin: 0;
+  }
+
+  /* Social Links List Style */
+
+  .socials-links {
+    margin-bottom: 0;
+  }
+
+  /* Footer Form Style */
+
+  .footer-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+  }
+
+  /* Footer Form Title Style */
+
+  .footer-form-title {
+    margin-right: auto;
+  }
+
+  /* Subscribe Form Input Style */
+
+  .subscribe-form-input {
+    min-width: 264px;
+    margin-bottom: 0;
+  }
 }
 
 /* If the user has 2x resolution on screen we put this 2x bg to user`s device */
