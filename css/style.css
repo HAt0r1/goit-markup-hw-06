@@ -61,12 +61,6 @@ a {
   padding-right: 16px;
 }
 
-/* Is-Open Style */
-
-.is-open {
-  visibility: visible;
-}
-
 /* ============ Header Mobile Style ============ */
 
 /* Disable Nav Links for Mobile */
@@ -607,6 +601,12 @@ a {
   z-index: 100;
 }
 
+/* Is-Open Style */
+
+.is-open {
+  visibility: visible;
+}
+
 /* BackDrop Form Window Style */
 
 .backdrop-form-window {
@@ -858,6 +858,12 @@ a {
     padding: 24px 24px 40px 16px;
     transform: translateX(100%);
     transition: transform 250ms linear;
+  }
+
+  /* Is-Open Style */
+
+  .is-open {
+    visibility: visible;
   }
 
   /* Mobile Menu Container Pseudo-classes Style */
@@ -1386,6 +1392,12 @@ a {
 
   .footer-text-socials {
     margin-right: 80px;
+  }
+
+  /* Subscribe Form Input Style */
+
+  .subscribe-form-input {
+    opacity: 1;
   }
 
   /* ============ Footer Laptop Style ============ */
