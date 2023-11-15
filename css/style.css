@@ -111,7 +111,7 @@ a {
   min-width: 320px;
   padding: 72px 0 72px 0;
   background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
-    url(/images/people_office.jpg);
+    url(../images/people_office_tel.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -236,7 +236,7 @@ a {
 /* Team Photo Style */
 
 .team-photo {
-  width: 100%;
+  min-width: 100%;
 }
 
 /* User Data Style */
@@ -408,6 +408,7 @@ a {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 /* Portfolio Type Style */
@@ -423,6 +424,12 @@ a {
 .main-footer {
   padding: 97.5px 0 96px 0;
   background-color: var(--clr-nav-blue);
+}
+
+/* Footer First Container Style */
+
+.footer-first-container {
+  margin-bottom: 72px;
 }
 
 /* Footer Title Style */
@@ -451,7 +458,13 @@ a {
   color: var(--clr-cloud);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin: 0 auto 72px;
+  margin: 0 auto;
+}
+
+/* Footer Text Social Style */
+
+.footer-text-socials {
+  margin-bottom: 72px;
 }
 
 /* Footer Social Text Style */
@@ -472,7 +485,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-bottom: 72px;
 }
 
 /* Social Style */
@@ -591,7 +603,7 @@ a {
 /* ============ BackDrop Form  Mobile Style ============ */
 
 .backdrop {
-  visibility: hidden;
+  visibility: visible;
   position: fixed;
   top: 0;
   left: 0;
@@ -601,10 +613,10 @@ a {
   z-index: 100;
 }
 
-/* Is-Open Style */
+/* Use this class to hide own backdrop */
 
-.is-open {
-  visibility: visible;
+.is-hidden {
+  visibility: hidden;
 }
 
 /* BackDrop Form Window Style */
@@ -833,7 +845,7 @@ a {
 
 /* !!!!! In my opinion we don`t need to put min-width 320px in this case, cuz we already have max-width with 767px and it`s enough to cellphone */
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) {
   /* Mobile burger style */
 
   .mobile-nav-btn {
@@ -856,29 +868,17 @@ a {
     left: 0;
     z-index: 100;
     background-color: var(--clr-white);
-    visibility: hidden;
-    padding: 24px 24px 40px 16px;
+    padding: 72px 24px 40px 16px;
     transform: translateX(100%);
     transition: transform 250ms linear;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Is-Open Style */
 
   .is-open {
-    visibility: visible;
-  }
-
-  /* Mobile Menu Container Pseudo-classes Style */
-
-  .mobile-menu-container:focus,
-  .mobile-menu-container:focus {
-    transform: translateX(0%);
-  }
-
-  /* Mobile Menu Container, where I put all content */
-
-  .mobile-menu-items-container {
-    position: relative;
+    transform: translateX(0);
   }
 
   /* Menu Close Button Style */
@@ -888,13 +888,21 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
-    right: 0;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid var(--clr-cornflower);
+    transition: all 250ms;
+  }
+
+  .menu-close-btn:hover,
+  .menu-close-btn:focus {
+    border: none;
+    background-color: var(--clr-ocean);
+    fill: var(--clr-white);
   }
 
   /* Menu List Style */
@@ -903,8 +911,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 48px;
-    margin-bottom: 168px;
+    margin-bottom: auto;
   }
 
   /* Menu Item Link Style */
@@ -996,9 +1003,23 @@ a {
   }
 }
 
+/* Media background image resolution on cellphone */
+
+@media screen and (min-width: 320px), screen and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people-office-tel@2x.jpg);
+  }
+}
+
 /* ============ Media for Tablet ============ */
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
   /* Hide Mobile Burger Button */
 
   .mobile-nav-btn {
@@ -1122,6 +1143,8 @@ a {
   .hero-section {
     min-width: 768px;
     padding: 112px 0;
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people_office_tablet.jpg);
   }
 
   /* Hero Title Style */
@@ -1158,6 +1181,11 @@ a {
     row-gap: 64px;
   }
 
+  .info-title {
+    margin-left: 0;
+    text-align: left;
+  }
+
   /* ============ Portfolio Section Tablet Style ============ */
 
   .portfolio-cards {
@@ -1175,10 +1203,6 @@ a {
 
   /* ============ Footer Tablet Style ============ */
 
-  .main-footer {
-    padding-left: 108px;
-  }
-
   /* Footer Main Container Style */
 
   .footer-main-container {
@@ -1188,6 +1212,7 @@ a {
     align-items: baseline;
     column-gap: 24px;
     row-gap: 72px;
+    max-width: 550px;
   }
 
   /* Footer First Container Style */
@@ -1226,7 +1251,8 @@ a {
   /* Footer Social Text Style */
 
   .footer-social-text {
-    margin: 0;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 
   /* Social Links List Style */
@@ -1270,6 +1296,15 @@ a {
   }
 }
 
+/* Media resolution on Tablet */
+
+@media screen and (min-width: 768px), screen and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people_office_tablet@2x.jpg);
+  }
+}
+
 /* ============ Media for Laptop ============ */
 
 @media screen and (min-width: 1158px) {
@@ -1278,7 +1313,7 @@ a {
   .container {
     max-width: 1158px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0;
   }
 
   /* ============ Header Laptop Style ============ */
@@ -1306,6 +1341,8 @@ a {
 
   .hero-section {
     padding: 188px 0;
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people_office_laptop.jpg);
   }
 
   /* Hero Title Style */
@@ -1417,9 +1454,9 @@ a {
 
 /* If the user has 2x resolution on screen we put this 2x bg to user`s device */
 
-@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-width: 1158px), screen and (min-resolution: 192dpi) {
   .hero-section {
     background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
-      url(/images/people_office@2x.jpg);
+      url(/images/people_office_laptop@2x.jpg);
   }
 }
