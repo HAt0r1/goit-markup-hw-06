@@ -108,13 +108,14 @@ a {
 /* ============ Hero Section  Mobile Style ============ */
 
 .hero-section {
-  min-width: 320px;
+  max-width: 320px;
   padding: 72px 0 72px 0;
   background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
     url(../images/people_office_tel.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 auto;
 }
 
 /* Hero Title Style */
@@ -198,7 +199,7 @@ a {
 
 .team-section {
   background-color: var(--clr-cloud);
-  padding: 96px 28px;
+  padding: 96px 0;
 }
 
 /* Team Title Style */
@@ -242,9 +243,8 @@ a {
 /* User Data Style */
 
 .user-data {
-  max-width: 232px;
-  padding: 32px 0;
-  margin: 0 auto;
+  min-width: 232px;
+  padding: 32px 16px;
   gap: 8px;
   background-color: var(--clr-white);
 }
@@ -1003,15 +1003,6 @@ a {
   }
 }
 
-/* Media background image resolution on cellphone */
-
-@media screen and (min-width: 320px), screen and (min-resolution: 192dpi) {
-  .hero-section {
-    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
-      url(../images/people-office-tel@2x.jpg);
-  }
-}
-
 /* ============ Media for Tablet ============ */
 
 @media screen and (min-width: 768px) {
@@ -1141,7 +1132,7 @@ a {
   /* ============ Hero Section Tablet Style ============ */
 
   .hero-section {
-    min-width: 768px;
+    max-width: 768px;
     padding: 112px 0;
     background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
       url(../images/people_office_tablet.jpg);
@@ -1222,6 +1213,7 @@ a {
     flex-direction: column;
     gap: 17.5px;
     align-items: center;
+    margin-bottom: 0;
   }
 
   /* Footer Title Style */
@@ -1246,6 +1238,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin-bottom: 0;
   }
 
   /* Footer Social Text Style */
@@ -1296,15 +1289,6 @@ a {
   }
 }
 
-/* Media resolution on Tablet */
-
-@media screen and (min-width: 768px), screen and (min-resolution: 192dpi) {
-  .hero-section {
-    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
-      url(../images/people_office_tablet@2x.jpg);
-  }
-}
-
 /* ============ Media for Laptop ============ */
 
 @media screen and (min-width: 1158px) {
@@ -1340,6 +1324,7 @@ a {
   /* ============ Hero Section Laptop Style ============ */
 
   .hero-section {
+    max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
       url(../images/people_office_laptop.jpg);
@@ -1452,11 +1437,29 @@ a {
   }
 }
 
-/* If the user has 2x resolution on screen we put this 2x bg to user`s device */
+/* Media background image resolution on cellphone */
 
-@media screen and (min-width: 1158px), screen and (min-resolution: 192dpi) {
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .hero-section {
     background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
-      url(/images/people_office_laptop@2x.jpg);
+      url(../images/people-office-tel@2x.jpg);
+  }
+}
+
+/* Media resolution on Tablet */
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people_office_tablet@2x.jpg);
+  }
+}
+
+/* If the user has 2x resolution on screen we put this 2x bg to user`s device */
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient(var(--clr-grey), var(--clr-grey)),
+      url(../images/people_office_laptop@2x.jpg);
   }
 }
