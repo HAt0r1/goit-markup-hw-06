@@ -57,6 +57,8 @@ a {
 }
 
 .container {
+  max-width: 320px;
+  margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -168,6 +170,8 @@ a {
 
 .info-section-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 72px;
 }
@@ -926,6 +930,12 @@ a {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Fist Element Color Style */
+
+  .menu-list-item:first-child > .menu-item-link {
+    color: var(--clr-ocean);
+  }
+
   /* Menu Item Link Pseudo-classes Style */
 
   .menu-item-link:hover,
@@ -965,7 +975,7 @@ a {
 
   .menu-socials-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
   }
@@ -1024,8 +1034,8 @@ a {
   /* ============ Header Tablet Style ============ */
 
   .main-header {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border-bottom: 1px solid var(--clr-cornflower);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
